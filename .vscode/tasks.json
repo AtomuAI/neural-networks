@@ -1,0 +1,1415 @@
+{
+    "tasks":
+    [
+        {
+            "label": "Neural Networks: Debug-Build Random -> Linux x64 C++",
+            "command": "/usr/bin/g++",
+            "args": [
+                "-std=c++23",
+                "-fdiagnostics-color=always",
+                //"-fanalyzer",
+                "-g",
+                "-c",
+                "${workspaceFolder}/c++/source/core/random.cpp",
+                "-o",
+                "${workspaceFolder}/c++/build/debug/x64/core/random.o",
+                "-I${workspaceFolder}/../"
+            ]
+        },
+        {
+            "label": "Neural Networks: Debug-Build Shape -> Linux x64 C++",
+            "command": "/usr/bin/g++",
+            "args": [
+                "-std=c++23",
+                "-fdiagnostics-color=always",
+                //"-fanalyzer",
+                "-g",
+                "-c",
+                "${workspaceFolder}/c++/source/core/shape.cpp",
+                "-o",
+                "${workspaceFolder}/c++/build/debug/x64/core/shape.o",
+                "-I${workspaceFolder}/../"
+            ]
+        },
+        {
+            "label": "Neural Networks: Debug-Build Tensor -> Linux x64 C++",
+            "command": "/usr/bin/g++",
+            "args": [
+                "-std=c++23",
+                "-fdiagnostics-color=always",
+                //"-fanalyzer",
+                "-g",
+                "-c",
+                "${workspaceFolder}/c++/source/core/tensor.cpp",
+                "-o",
+                "${workspaceFolder}/c++/build/debug/x64/core/tensor.o",
+                "-I${workspaceFolder}/../"
+            ]
+        },
+        {
+            "label": "Neural Networks: Debug-Build Base Layer -> Linux x64 C++",
+            "command": "/usr/bin/g++",
+            "args": [
+                "-std=c++23",
+                "-fdiagnostics-color=always",
+                //"-fanalyzer",
+                "-g",
+                "-c",
+                "${workspaceFolder}/c++/source/layer/base.cpp",
+                "-o",
+                "${workspaceFolder}/c++/build/debug/x64/layer/base.o",
+                "-I${workspaceFolder}/../"
+            ]
+        },
+        {
+            "label": "Neural Networks: Debug-Build Node Layer -> Linux x64 C++",
+            "command": "/usr/bin/g++",
+            "args": [
+                "-std=c++23",
+                "-fdiagnostics-color=always",
+                //"-fanalyzer",
+                "-g",
+                "-c",
+                "${workspaceFolder}/c++/source/layer/node.cpp",
+                "-o",
+                "${workspaceFolder}/c++/build/debug/x64/layer/node.o",
+                "-I${workspaceFolder}/../"
+            ]
+        },
+        {
+            "label": "Neural Networks: Debug-Build Bias Layer -> Linux x64 C++",
+            "command": "/usr/bin/g++",
+            "args": [
+                "-std=c++23",
+                "-fdiagnostics-color=always",
+                //"-fanalyzer",
+                "-g",
+                "-c",
+                "${workspaceFolder}/c++/source/layer/bias.cpp",
+                "-o",
+                "${workspaceFolder}/c++/build/debug/x64/layer/bias.o",
+                "-I${workspaceFolder}/../"
+            ]
+        },
+        {
+            "label": "Neural Networks: Debug-Build Dense Layer -> Linux x64 C++",
+            "command": "/usr/bin/g++",
+            "args": [
+                "-std=c++23",
+                "-fdiagnostics-color=always",
+                //"-fanalyzer",
+                "-g",
+                "-c",
+                "${workspaceFolder}/c++/source/layer/dense.cpp",
+                "-o",
+                "${workspaceFolder}/c++/build/debug/x64/layer/dense.o",
+                "-I${workspaceFolder}/../"
+            ]
+        },
+        {
+            "label": "Neural Networks: Debug-Build Convolution Layer -> Linux x64 C++",
+            "command": "/usr/bin/g++",
+            "args": [
+                "-std=c++23",
+                "-fdiagnostics-color=always",
+                //"-fanalyzer",
+                "-g",
+                "-c",
+                "${workspaceFolder}/c++/source/layer/convolution.cpp",
+                "-o",
+                "${workspaceFolder}/c++/build/debug/x64/layer/convolution.o",
+                "-I${workspaceFolder}/../"
+            ]
+        },
+        {
+            "label": "Neural Networks: Debug-Build Pooling Layer -> Linux x64 C++",
+            "command": "/usr/bin/g++",
+            "args": [
+                "-std=c++23",
+                "-fdiagnostics-color=always",
+                //"-fanalyzer",
+                "-g",
+                "-c",
+                "${workspaceFolder}/c++/source/layer/pooling.cpp",
+                "-o",
+                "${workspaceFolder}/c++/build/debug/x64/layer/pooling.o",
+                "-I${workspaceFolder}/../"
+            ]
+        },
+        {
+            "label": "Neural Networks: Debug-Build Normalization Layer -> Linux x64 C++",
+            "command": "/usr/bin/g++",
+            "args": [
+                "-std=c++23",
+                "-fdiagnostics-color=always",
+                //"-fanalyzer",
+                "-g",
+                "-c",
+                "${workspaceFolder}/c++/source/layer/normalization.cpp",
+                "-o",
+                "${workspaceFolder}/c++/build/debug/x64/layer/normalization.o",
+                "-I${workspaceFolder}/../"
+            ]
+        },
+        {
+            "label": "Neural Networks: Debug-Build Softmax Layer -> Linux x64 C++",
+            "command": "/usr/bin/g++",
+            "args": [
+                "-std=c++23",
+                "-fdiagnostics-color=always",
+                //"-fanalyzer",
+                "-g",
+                "-c",
+                "${workspaceFolder}/c++/source/layer/softmax.cpp",
+                "-o",
+                "${workspaceFolder}/c++/build/debug/x64/layer/softmax.o",
+                "-I${workspaceFolder}/../"
+            ]
+        },
+        {
+            "label": "Neural Networks: Debug-Build Activation Layer -> Linux x64 C++",
+            "command": "/usr/bin/g++",
+            "args": [
+                "-std=c++23",
+                "-fdiagnostics-color=always",
+                //"-fanalyzer",
+                "-g",
+                "-c",
+                "${workspaceFolder}/c++/source/layer/activation.cpp",
+                "-o",
+                "${workspaceFolder}/c++/build/debug/x64/layer/activation.o",
+                "-I${workspaceFolder}/../"
+            ]
+        },
+        {
+            "label": "Neural Networks: Debug-Build Dropout Layer -> Linux x64 C++",
+            "command": "/usr/bin/g++",
+            "args": [
+                "-std=c++23",
+                "-fdiagnostics-color=always",
+                //"-fanalyzer",
+                "-g",
+                "-c",
+                "${workspaceFolder}/c++/source/layer/dropout.cpp",
+                "-o",
+                "${workspaceFolder}/c++/build/debug/x64/layer/dropout.o",
+                "-I${workspaceFolder}/../"
+            ]
+        },
+        {
+            "label": "Neural Networks: Debug-Build Cost Layer -> Linux x64 C++",
+            "command": "/usr/bin/g++",
+            "args": [
+                "-std=c++23",
+                "-fdiagnostics-color=always",
+                //"-fanalyzer",
+                "-g",
+                "-c",
+                "${workspaceFolder}/c++/source/layer/cost.cpp",
+                "-o",
+                "${workspaceFolder}/c++/build/debug/x64/layer/cost.o",
+                "-I${workspaceFolder}/../"
+            ]
+        },
+        {
+            "label": "Neural Networks: Debug-Build Translation Layer -> Linux x64 C++",
+            "command": "/usr/bin/g++",
+            "args": [
+                "-std=c++23",
+                "-fdiagnostics-color=always",
+                //"-fanalyzer",
+                "-g",
+                "-c",
+                "${workspaceFolder}/c++/source/layer/translation.cpp",
+                "-o",
+                "${workspaceFolder}/c++/build/debug/x64/layer/translation.o",
+                "-I${workspaceFolder}/../"
+            ]
+        },
+        {
+            "label": "Neural Networks: Debug-Build Rotation Layer -> Linux x64 C++",
+            "command": "/usr/bin/g++",
+            "args": [
+                "-std=c++23",
+                "-fdiagnostics-color=always",
+                //"-fanalyzer",
+                "-g",
+                "-c",
+                "${workspaceFolder}/c++/source/layer/rotation.cpp",
+                "-o",
+                "${workspaceFolder}/c++/build/debug/x64/layer/rotation.o",
+                "-I${workspaceFolder}/../"
+            ]
+        },
+        {
+            "label": "Neural Networks: Debug-Build Dilation Layer -> Linux x64 C++",
+            "command": "/usr/bin/g++",
+            "args": [
+                "-std=c++23",
+                "-fdiagnostics-color=always",
+                //"-fanalyzer",
+                "-g",
+                "-c",
+                "${workspaceFolder}/c++/source/layer/dilation.cpp",
+                "-o",
+                "${workspaceFolder}/c++/build/debug/x64/layer/dilation.o",
+                "-I${workspaceFolder}/../"
+            ]
+        },
+        {
+            "label": "Neural Networks: Debug-Build All -> Linux x64 C++",
+            "dependsOn": [
+                "Neural Networks: Debug-Build Random -> Linux x64 C++",
+                "Neural Networks: Debug-Build Shape -> Linux x64 C++",
+                "Neural Networks: Debug-Build Tensor -> Linux x64 C++",
+                "Neural Networks: Debug-Build Base Layer -> Linux x64 C++",
+                "Neural Networks: Debug-Build Node Layer -> Linux x64 C++",
+                "Neural Networks: Debug-Build Bias Layer -> Linux x64 C++",
+                "Neural Networks: Debug-Build Dense Layer -> Linux x64 C++",
+                "Neural Networks: Debug-Build Convolution Layer -> Linux x64 C++",
+                "Neural Networks: Debug-Build Pooling Layer -> Linux x64 C++",
+                "Neural Networks: Debug-Build Normalization Layer -> Linux x64 C++",
+                "Neural Networks: Debug-Build Softmax Layer -> Linux x64 C++",
+                "Neural Networks: Debug-Build Activation Layer -> Linux x64 C++",
+                "Neural Networks: Debug-Build Dropout Layer -> Linux x64 C++",
+                "Neural Networks: Debug-Build Cost Layer -> Linux x64 C++"
+                //"Neural Networks: Debug-Build Translation Layer -> Linux x64 C++",
+                //"Neural Networks: Debug-Build Rotation Layer -> Linux x64 C++",
+                //"Neural Networks: Debug-Build Dilation Layer -> Linux x64 C++",
+            ],
+            "dependsOrder": "sequence"
+        },
+        {
+            "label": "Neural Networks: Debug-Archive-Static All -> Linux x64 C++",
+            "command": "/usr/bin/gcc-ar",
+            "args": [
+                "rvs",
+                "${workspaceFolder}/c++/build/debug/x64/libbewusstsein_nn.a",
+                "${workspaceFolder}/c++/build/debug/x64/core/random.o",
+                "${workspaceFolder}/c++/build/debug/x64/core/shape.o",
+                "${workspaceFolder}/c++/build/debug/x64/core/tensor.o",
+                "${workspaceFolder}/c++/build/debug/x64/layer/base.o",
+                "${workspaceFolder}/c++/build/debug/x64/layer/node.o",
+                "${workspaceFolder}/c++/build/debug/x64/layer/bias.o",
+                "${workspaceFolder}/c++/build/debug/x64/layer/dense.o",
+                "${workspaceFolder}/c++/build/debug/x64/layer/convolution.o",
+                "${workspaceFolder}/c++/build/debug/x64/layer/pooling.o",
+                "${workspaceFolder}/c++/build/debug/x64/layer/normalization.o",
+                "${workspaceFolder}/c++/build/debug/x64/layer/softmax.o",
+                "${workspaceFolder}/c++/build/debug/x64/layer/activation.o",
+                "${workspaceFolder}/c++/build/debug/x64/layer/dropout.o",
+                "${workspaceFolder}/c++/build/debug/x64/layer/cost.o"
+                //"${workspaceFolder}/c++/build/debug/x64/layer/translation.o",
+                //"${workspaceFolder}/c++/build/debug/x64/layer/rotation.o",
+                //"${workspaceFolder}/c++/build/debug/x64/layer/dilation.o",
+            ]
+        },
+        {
+            "label": "Neural Networks: Debug-Archive-Shared All -> Linux x64 C++",
+            "command": "/usr/bin/gcc",
+            "args": [
+                "-shared",
+                "-o",
+                "${workspaceFolder}/c++/build/debug/x64/libbewusstsein_nn.so",
+                "${workspaceFolder}/c++/build/debug/x64/core/random.o",
+                "${workspaceFolder}/c++/build/debug/x64/core/shape.o",
+                "${workspaceFolder}/c++/build/debug/x64/core/tensor.o",
+                "${workspaceFolder}/c++/build/debug/x64/layer/base.o",
+                "${workspaceFolder}/c++/build/debug/x64/layer/node.o",
+                "${workspaceFolder}/c++/build/debug/x64/layer/bias.o",
+                "${workspaceFolder}/c++/build/debug/x64/layer/dense.o",
+                "${workspaceFolder}/c++/build/debug/x64/layer/convolution.o",
+                "${workspaceFolder}/c++/build/debug/x64/layer/pooling.o",
+                "${workspaceFolder}/c++/build/debug/x64/layer/normalization.o",
+                "${workspaceFolder}/c++/build/debug/x64/layer/softmax.o",
+                "${workspaceFolder}/c++/build/debug/x64/layer/activation.o",
+                "${workspaceFolder}/c++/build/debug/x64/layer/dropout.o",
+                "${workspaceFolder}/c++/build/debug/x64/layer/cost.o"
+                //"${workspaceFolder}/c++/build/debug/x64/layer/translation.o",
+                //"${workspaceFolder}/c++/build/debug/x64/layer/rotation.o",
+                //"${workspaceFolder}/c++/build/debug/x64/layer/dilation.o",
+            ]
+        },
+        {
+            "label": "Neural Networks: Debug-Build & Debug-Archive -> Linux x64 C++",
+            "dependsOn": [
+                "Neural Networks: Debug-Build All -> Linux x64 C++",
+                "Neural Networks: Debug-Archive-Static All -> Linux x64 C++",
+                //"Neural Networks: Debug-Archive-Shared All -> Linux x64 C++"
+            ],
+            "dependsOrder": "sequence",
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "label": "Neural Networks: Release-Build Random -> Linux x64 C++",
+            "command": "/usr/bin/g++",
+            "args": [
+                "-std=c++23",
+                "-fdiagnostics-color=always",
+                "-mcpu=corei7",
+                "-mtune=corei7",
+                "-O3",
+                "-funroll-loops",
+                "-ffp-contract=fast",
+                "-ftree-vectorize",
+                "-c",
+                "${workspaceFolder}/c++/source/core/random.cpp",
+                "-o",
+                "${workspaceFolder}/c++/build/release/x64/core/random.o",
+                "-I${workspaceFolder}/../"
+            ]
+        },
+        {
+            "label": "Neural Networks: Release-Build Shape -> Linux x64 C++",
+            "command": "/usr/bin/g++",
+            "args": [
+                "-std=c++23",
+                "-fdiagnostics-color=always",
+                "-mcpu=corei7",
+                "-mtune=corei7",
+                "-O3",
+                "-funroll-loops",
+                "-ffp-contract=fast",
+                "-ftree-vectorize",
+                "-c",
+                "${workspaceFolder}/c++/source/core/shape.cpp",
+                "-o",
+                "${workspaceFolder}/c++/build/release/x64/core/shape.o",
+                "-I${workspaceFolder}/../"
+            ]
+        },
+        {
+            "label": "Neural Networks: Release-Build Tensor -> Linux x64 C++",
+            "command": "/usr/bin/g++",
+            "args": [
+                "-std=c++23",
+                "-fdiagnostics-color=always",
+                "-mcpu=corei7",
+                "-mtune=corei7",
+                "-O3",
+                "-funroll-loops",
+                "-ffp-contract=fast",
+                "-ftree-vectorize",
+                "-c",
+                "${workspaceFolder}/c++/source/core/tensor.cpp",
+                "-o",
+                "${workspaceFolder}/c++/build/release/x64/core/tensor.o",
+                "-I${workspaceFolder}/../"
+            ]
+        },
+        {
+            "label": "Neural Networks: Release-Build Base Layer -> Linux x64 C++",
+            "command": "/usr/bin/g++",
+            "args": [
+                "-std=c++23",
+                "-fdiagnostics-color=always",
+                "-mcpu=corei7",
+                "-mtune=corei7",
+                "-O3",
+                "-funroll-loops",
+                "-ffp-contract=fast",
+                "-ftree-vectorize",
+                "-c",
+                "${workspaceFolder}/c++/source/layer/base.cpp",
+                "-o",
+                "${workspaceFolder}/c++/build/release/x64/layer/base.o",
+                "-I${workspaceFolder}/../",
+                "-I/home/shane/Documents/VSCode/bewusstsein_libraries"
+            ]
+        },
+        {
+            "label": "Neural Networks: Release-Build Node Layer -> Linux x64 C++",
+            "command": "/usr/bin/g++",
+            "args": [
+                "-std=c++23",
+                "-fdiagnostics-color=always",
+                "-mcpu=corei7",
+                "-mtune=corei7",
+                "-O3",
+                "-funroll-loops",
+                "-ffp-contract=fast",
+                "-ftree-vectorize",
+                "-c",
+                "${workspaceFolder}/c++/source/layer/node.cpp",
+                "-o",
+                "${workspaceFolder}/c++/build/release/x64/layer/node.o",
+                "-I${workspaceFolder}/../",
+                "-I/home/shane/Documents/VSCode/bewusstsein_libraries"
+            ]
+        },
+        {
+            "label": "Neural Networks: Release-Build Bias Layer -> Linux x64 C++",
+            "command": "/usr/bin/g++",
+            "args": [
+                "-std=c++23",
+                "-fdiagnostics-color=always",
+                "-mcpu=corei7",
+                "-mtune=corei7",
+                "-O3",
+                "-funroll-loops",
+                "-ffp-contract=fast",
+                "-ftree-vectorize",
+                "-c",
+                "${workspaceFolder}/c++/source/layer/bias.cpp",
+                "-o",
+                "${workspaceFolder}/c++/build/release/x64/layer/bias.o",
+                "-I${workspaceFolder}/../",
+                "-I/home/shane/Documents/VSCode/bewusstsein_libraries"
+            ]
+        },
+        {
+            "label": "Neural Networks: Release-Build Dense Layer -> Linux x64 C++",
+            "command": "/usr/bin/g++",
+            "args": [
+                "-std=c++23",
+                "-fdiagnostics-color=always",
+                "-mcpu=corei7",
+                "-mtune=corei7",
+                "-O3",
+                "-funroll-loops",
+                "-ffp-contract=fast",
+                "-ftree-vectorize",
+                "-c",
+                "${workspaceFolder}/c++/source/layer/dense.cpp",
+                "-o",
+                "${workspaceFolder}/c++/build/release/x64/layer/dense.o",
+                "-I${workspaceFolder}/../",
+                "-I/home/shane/Documents/VSCode/bewusstsein_libraries"
+            ]
+        },
+        {
+            "label": "Neural Networks: Release-Build Convolution Layer -> Linux x64 C++",
+            "command": "/usr/bin/g++",
+            "args": [
+                "-std=c++23",
+                "-fdiagnostics-color=always",
+                "-mcpu=corei7",
+                "-mtune=corei7",
+                "-O3",
+                "-funroll-loops",
+                "-ffp-contract=fast",
+                "-ftree-vectorize",
+                "-c",
+                "${workspaceFolder}/c++/source/layer/convolution.cpp",
+                "-o",
+                "${workspaceFolder}/c++/build/release/x64/layer/convolution.o",
+                "-I${workspaceFolder}/../",
+                "-I/home/shane/Documents/VSCode/bewusstsein_libraries"
+            ]
+        },
+        {
+            "label": "Neural Networks: Release-Build Pooling Layer -> Linux x64 C++",
+            "command": "/usr/bin/g++",
+            "args": [
+                "-std=c++23",
+                "-fdiagnostics-color=always",
+                "-mcpu=corei7",
+                "-mtune=corei7",
+                "-O3",
+                "-funroll-loops",
+                "-ffp-contract=fast",
+                "-ftree-vectorize",
+                "-c",
+                "${workspaceFolder}/c++/source/layer/pooling.cpp",
+                "-o",
+                "${workspaceFolder}/c++/build/release/x64/layer/pooling.o",
+                "-I${workspaceFolder}/../",
+                "-I/home/shane/Documents/VSCode/bewusstsein_libraries"
+            ]
+        },
+        {
+            "label": "Neural Networks: Release-Build Normalization Layer -> Linux x64 C++",
+            "command": "/usr/bin/g++",
+            "args": [
+                "-std=c++23",
+                "-fdiagnostics-color=always",
+                "-mcpu=corei7",
+                "-mtune=corei7",
+                "-O3",
+                "-funroll-loops",
+                "-ffp-contract=fast",
+                "-ftree-vectorize",
+                "-c",
+                "${workspaceFolder}/c++/source/layer/normalization.cpp",
+                "-o",
+                "${workspaceFolder}/c++/build/release/x64/layer/normalization.o",
+                "-I${workspaceFolder}/../",
+                "-I/home/shane/Documents/VSCode/bewusstsein_libraries"
+            ]
+        },
+        {
+            "label": "Neural Networks: Release-Build Softmax Layer -> Linux x64 C++",
+            "command": "/usr/bin/g++",
+            "args": [
+                "-std=c++23",
+                "-fdiagnostics-color=always",
+                "-mcpu=corei7",
+                "-mtune=corei7",
+                "-O3",
+                "-funroll-loops",
+                "-ffp-contract=fast",
+                "-ftree-vectorize",
+                "-c",
+                "${workspaceFolder}/c++/source/layer/softmax.cpp",
+                "-o",
+                "${workspaceFolder}/c++/build/release/x64/layer/softmax.o",
+                "-I${workspaceFolder}/../",
+                "-I/home/shane/Documents/VSCode/bewusstsein_libraries"
+            ]
+        },
+        {
+            "label": "Neural Networks: Release-Build Activation Layer -> Linux x64 C++",
+            "command": "/usr/bin/g++",
+            "args": [
+                "-std=c++23",
+                "-fdiagnostics-color=always",
+                "-mcpu=corei7",
+                "-mtune=corei7",
+                "-O3",
+                "-funroll-loops",
+                "-ffp-contract=fast",
+                "-ftree-vectorize",
+                "-c",
+                "${workspaceFolder}/c++/source/layer/activation.cpp",
+                "-o",
+                "${workspaceFolder}/c++/build/release/x64/layer/activation.o",
+                "-I${workspaceFolder}/../",
+                "-I/home/shane/Documents/VSCode/bewusstsein_libraries"
+            ]
+        },
+        {
+            "label": "Neural Networks: Release-Build Dropout Layer -> Linux x64 C++",
+            "command": "/usr/bin/g++",
+            "args": [
+                "-std=c++23",
+                "-fdiagnostics-color=always",
+                "-mcpu=corei7",
+                "-mtune=corei7",
+                "-O3",
+                "-funroll-loops",
+                "-ffp-contract=fast",
+                "-ftree-vectorize",
+                "-c",
+                "${workspaceFolder}/c++/source/layer/dropout.cpp",
+                "-o",
+                "${workspaceFolder}/c++/build/release/x64/layer/dropout.o",
+                "-I${workspaceFolder}/../",
+                "-I/home/shane/Documents/VSCode/bewusstsein_libraries"
+            ]
+        },
+        {
+            "label": "Neural Networks: Release-Build Cost Layer -> Linux x64 C++",
+            "command": "/usr/bin/g++",
+            "args": [
+                "-std=c++23",
+                "-fdiagnostics-color=always",
+                "-mcpu=corei7",
+                "-mtune=corei7",
+                "-O3",
+                "-funroll-loops",
+                "-ffp-contract=fast",
+                "-ftree-vectorize",
+                "-c",
+                "${workspaceFolder}/c++/source/layer/cost.cpp",
+                "-o",
+                "${workspaceFolder}/c++/build/release/x64/layer/cost.o",
+                "-I${workspaceFolder}/../",
+                "-I/home/shane/Documents/VSCode/bewusstsein_libraries"
+            ]
+        },
+        {
+            "label": "Neural Networks: Release-Archive-Static All -> Linux x64 C++",
+            "command": "/usr/bin/gcc-ar",
+            "args": [
+                "rvs",
+                "${workspaceFolder}/c++/build/release/x64/libbewusstsein_nn.a",
+                "${workspaceFolder}/c++/build/release/x64/core/random.o",
+                "${workspaceFolder}/c++/build/release/x64/core/shape.o",
+                "${workspaceFolder}/c++/build/release/x64/core/tensor.o",
+                "${workspaceFolder}/c++/build/release/x64/layer/base.o",
+                "${workspaceFolder}/c++/build/release/x64/layer/node.o",
+                "${workspaceFolder}/c++/build/release/x64/layer/bias.o",
+                "${workspaceFolder}/c++/build/release/x64/layer/dense.o",
+                "${workspaceFolder}/c++/build/release/x64/layer/convolution.o",
+                "${workspaceFolder}/c++/build/release/x64/layer/pooling.o",
+                "${workspaceFolder}/c++/build/release/x64/layer/normalization.o",
+                "${workspaceFolder}/c++/build/release/x64/layer/softmax.o",
+                "${workspaceFolder}/c++/build/release/x64/layer/activation.o",
+                "${workspaceFolder}/c++/build/release/x64/layer/dropout.o",
+                "${workspaceFolder}/c++/build/release/x64/layer/cost.o"
+                //"${workspaceFolder}/c++/build/release/x64/layer/translation.o",
+                //"${workspaceFolder}/c++/build/release/x64/layer/rotation.o",
+                //"${workspaceFolder}/c++/build/release/x64/layer/dilation.o",
+            ]
+        },
+        {
+            "label": "Neural Networks: Release-Archive-Shared All -> Linux x64 C++",
+            "command": "/usr/bin/gcc",
+            "args": [
+                "-shared",
+                "-o",
+                "${workspaceFolder}/c++/build/release/x64/libbewusstsein_nn.so",
+                "${workspaceFolder}/c++/build/release/x64/core/random.o",
+                "${workspaceFolder}/c++/build/release/x64/core/shape.o",
+                "${workspaceFolder}/c++/build/release/x64/core/tensor.o",
+                "${workspaceFolder}/c++/build/release/x64/layer/base.o",
+                "${workspaceFolder}/c++/build/release/x64/layer/node.o",
+                "${workspaceFolder}/c++/build/release/x64/layer/bias.o",
+                "${workspaceFolder}/c++/build/release/x64/layer/dense.o",
+                "${workspaceFolder}/c++/build/release/x64/layer/convolution.o",
+                "${workspaceFolder}/c++/build/release/x64/layer/pooling.o",
+                "${workspaceFolder}/c++/build/release/x64/layer/normalization.o",
+                "${workspaceFolder}/c++/build/release/x64/layer/softmax.o",
+                "${workspaceFolder}/c++/build/release/x64/layer/activation.o",
+                "${workspaceFolder}/c++/build/release/x64/layer/dropout.o",
+                "${workspaceFolder}/c++/build/release/x64/layer/cost.o"
+                //"${workspaceFolder}/c++/build/release/x64/layer/translation.o",
+                //"${workspaceFolder}/c++/build/release/x64/layer/rotation.o",
+                //"${workspaceFolder}/c++/build/release/x64/layer/dilation.o",
+            ]
+        },
+        {
+            "label": "Neural Networks: Release-Build & Release-Archive -> Linux x64 C++",
+            "dependsOn": [
+                "Neural Networks: Release-Build All -> Linux x64 C++",
+                "Neural Networks: Release-Archive-Static All -> Linux x64 C++",
+                //"Neural Networks: Release-Archive-Shared All -> Linux x64 C++"
+            ],
+            "dependsOrder": "sequence",
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+
+        
+
+        {
+            "label": "Neural Networks: Debug-Build Base Layer -> Linux Aarch64 C++",
+            "command": "/home/shane/Documents/bewusstsein_libs/compiler/arm-gnu-toolchain-13.2.rel1-x86_64-aarch64-none-linux-gnu/arm-gnu-toolchain-13.2.Rel1-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++",
+            "args": [
+                "-std=c++23",
+                "-fdiagnostics-color=always",
+                "-I/home/shane/Documents/bewusstsein_libs/compiler/arm-gnu-toolchain-13.2.rel1-x86_64-aarch64-none-linux-gnu/arm-gnu-toolchain-13.2.Rel1-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include",
+                "-g",
+                "-c",
+                "${workspaceFolder}/c++/source/layer/base.cpp",
+                "-o",
+                "${workspaceFolder}/c++/build/debug/aarch64/layer/base.o",
+                "-I${workspaceFolder}/../",
+                "-I/home/shane/Documents/VSCode/bewusstsein_libraries",
+                "-I/home/shane/Documents/bewusstsein_libs/packages/util-linux-libs-2.39.3-1-aarch64.pkg/usr/include"
+            ]
+        },
+        {
+            "label": "Neural Networks: Debug-Build Node Layer -> Linux Aarch64 C++",
+            "command": "/home/shane/Documents/bewusstsein_libs/compiler/arm-gnu-toolchain-13.2.rel1-x86_64-aarch64-none-linux-gnu/arm-gnu-toolchain-13.2.Rel1-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++",
+            "args": [
+                "-std=c++23",
+                "-fdiagnostics-color=always",
+                "-I/home/shane/Documents/bewusstsein_libs/compiler/arm-gnu-toolchain-13.2.rel1-x86_64-aarch64-none-linux-gnu/arm-gnu-toolchain-13.2.Rel1-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include",
+                "-g",
+                "-c",
+                "${workspaceFolder}/c++/source/layer/node.cpp",
+                "-o",
+                "${workspaceFolder}/c++/build/debug/aarch64/layer/node.o",
+                "-I${workspaceFolder}/../",
+                "-I/home/shane/Documents/VSCode/bewusstsein_libraries",
+                "-I/home/shane/Documents/bewusstsein_libs/packages/util-linux-libs-2.39.3-1-aarch64.pkg/usr/include"
+            ]
+        },
+        {
+            "label": "Neural Networks: Debug-Build Bias Layer -> Linux Aarch64 C++",
+            "command": "/home/shane/Documents/bewusstsein_libs/compiler/arm-gnu-toolchain-13.2.rel1-x86_64-aarch64-none-linux-gnu/arm-gnu-toolchain-13.2.Rel1-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++",
+            "args": [
+                "-std=c++23",
+                "-fdiagnostics-color=always",
+                "-I/home/shane/Documents/bewusstsein_libs/compiler/arm-gnu-toolchain-13.2.rel1-x86_64-aarch64-none-linux-gnu/arm-gnu-toolchain-13.2.Rel1-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include",
+                "-g",
+                "-c",
+                "${workspaceFolder}/c++/source/layer/bias.cpp",
+                "-o",
+                "${workspaceFolder}/c++/build/debug/aarch64/layer/bias.o",
+                "-I${workspaceFolder}/../",
+                "-I/home/shane/Documents/VSCode/bewusstsein_libraries",
+                "-I/home/shane/Documents/bewusstsein_libs/packages/util-linux-libs-2.39.3-1-aarch64.pkg/usr/include"
+            ]
+        },
+        {
+            "label": "Neural Networks: Debug-Build Dense Layer -> Linux Aarch64 C++",
+            "command": "/home/shane/Documents/bewusstsein_libs/compiler/arm-gnu-toolchain-13.2.rel1-x86_64-aarch64-none-linux-gnu/arm-gnu-toolchain-13.2.Rel1-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++",
+            "args": [
+                "-std=c++23",
+                "-fdiagnostics-color=always",
+                "-I/home/shane/Documents/bewusstsein_libs/compiler/arm-gnu-toolchain-13.2.rel1-x86_64-aarch64-none-linux-gnu/arm-gnu-toolchain-13.2.Rel1-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include",
+                "-g",
+                "-c",
+                "${workspaceFolder}/c++/source/layer/dense.cpp",
+                "-o",
+                "${workspaceFolder}/c++/build/debug/aarch64/layer/dense.o",
+                "-I${workspaceFolder}/../",
+                "-I/home/shane/Documents/VSCode/bewusstsein_libraries",
+                "-I/home/shane/Documents/bewusstsein_libs/packages/util-linux-libs-2.39.3-1-aarch64.pkg/usr/include"
+            ]
+        },
+        {
+            "label": "Neural Networks: Debug-Build Convolution Layer -> Linux Aarch64 C++",
+            "command": "/home/shane/Documents/bewusstsein_libs/compiler/arm-gnu-toolchain-13.2.rel1-x86_64-aarch64-none-linux-gnu/arm-gnu-toolchain-13.2.Rel1-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++",
+            "args": [
+                "-std=c++23",
+                "-fdiagnostics-color=always",
+                "-I/home/shane/Documents/bewusstsein_libs/compiler/arm-gnu-toolchain-13.2.rel1-x86_64-aarch64-none-linux-gnu/arm-gnu-toolchain-13.2.Rel1-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include",
+                "-g",
+                "-c",
+                "${workspaceFolder}/c++/source/layer/convolution.cpp",
+                "-o",
+                "${workspaceFolder}/c++/build/debug/aarch64/layer/convolution.o",
+                "-I${workspaceFolder}/../",
+                "-I/home/shane/Documents/VSCode/bewusstsein_libraries",
+                "-I/home/shane/Documents/bewusstsein_libs/packages/util-linux-libs-2.39.3-1-aarch64.pkg/usr/include"
+            ]
+        },
+        {
+            "label": "Neural Networks: Debug-Build Pooling Layer -> Linux Aarch64 C++",
+            "command": "/home/shane/Documents/bewusstsein_libs/compiler/arm-gnu-toolchain-13.2.rel1-x86_64-aarch64-none-linux-gnu/arm-gnu-toolchain-13.2.Rel1-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++",
+            "args": [
+                "-std=c++23",
+                "-fdiagnostics-color=always",
+                "-I/home/shane/Documents/bewusstsein_libs/compiler/arm-gnu-toolchain-13.2.rel1-x86_64-aarch64-none-linux-gnu/arm-gnu-toolchain-13.2.Rel1-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include",
+                "-g",
+                "-c",
+                "${workspaceFolder}/c++/source/layer/pooling.cpp",
+                "-o",
+                "${workspaceFolder}/c++/build/debug/aarch64/layer/pooling.o",
+                "-I${workspaceFolder}/../",
+                "-I/home/shane/Documents/VSCode/bewusstsein_libraries",
+                "-I/home/shane/Documents/bewusstsein_libs/packages/util-linux-libs-2.39.3-1-aarch64.pkg/usr/include"
+            ]
+        },
+        {
+            "label": "Neural Networks: Debug-Build Normalization Layer -> Linux Aarch64 C++",
+            "command": "/home/shane/Documents/bewusstsein_libs/compiler/arm-gnu-toolchain-13.2.rel1-x86_64-aarch64-none-linux-gnu/arm-gnu-toolchain-13.2.Rel1-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++",
+            "args": [
+                "-std=c++23",
+                "-fdiagnostics-color=always",
+                "-I/home/shane/Documents/bewusstsein_libs/compiler/arm-gnu-toolchain-13.2.rel1-x86_64-aarch64-none-linux-gnu/arm-gnu-toolchain-13.2.Rel1-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include",
+                "-g",
+                "-c",
+                "${workspaceFolder}/c++/source/layer/normalization.cpp",
+                "-o",
+                "${workspaceFolder}/c++/build/debug/aarch64/layer/normalization.o",
+                "-I${workspaceFolder}/../",
+                "-I/home/shane/Documents/VSCode/bewusstsein_libraries",
+                "-I/home/shane/Documents/bewusstsein_libs/packages/util-linux-libs-2.39.3-1-aarch64.pkg/usr/include"
+            ]
+        },
+        {
+            "label": "Neural Networks: Debug-Build Softmax Layer -> Linux Aarch64 C++",
+            "command": "/home/shane/Documents/bewusstsein_libs/compiler/arm-gnu-toolchain-13.2.rel1-x86_64-aarch64-none-linux-gnu/arm-gnu-toolchain-13.2.Rel1-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++",
+            "args": [
+                "-std=c++23",
+                "-fdiagnostics-color=always",
+                "-I/home/shane/Documents/bewusstsein_libs/compiler/arm-gnu-toolchain-13.2.rel1-x86_64-aarch64-none-linux-gnu/arm-gnu-toolchain-13.2.Rel1-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include",
+                "-g",
+                "-c",
+                "${workspaceFolder}/c++/source/layer/softmax.cpp",
+                "-o",
+                "${workspaceFolder}/c++/build/debug/aarch64/layer/softmax.o",
+                "-I${workspaceFolder}/../",
+                "-I/home/shane/Documents/VSCode/bewusstsein_libraries",
+                "-I/home/shane/Documents/bewusstsein_libs/packages/util-linux-libs-2.39.3-1-aarch64.pkg/usr/include"
+            ]
+        },
+        {
+            "label": "Neural Networks: Debug-Build Activation Layer -> Linux Aarch64 C++",
+            "command": "/home/shane/Documents/bewusstsein_libs/compiler/arm-gnu-toolchain-13.2.rel1-x86_64-aarch64-none-linux-gnu/arm-gnu-toolchain-13.2.Rel1-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++",
+            "args": [
+                "-std=c++23",
+                "-fdiagnostics-color=always",
+                "-I/home/shane/Documents/bewusstsein_libs/compiler/arm-gnu-toolchain-13.2.rel1-x86_64-aarch64-none-linux-gnu/arm-gnu-toolchain-13.2.Rel1-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include",
+                "-g",
+                "-c",
+                "${workspaceFolder}/c++/source/layer/activation.cpp",
+                "-o",
+                "${workspaceFolder}/c++/build/debug/aarch64/layer/activation.o",
+                "-I${workspaceFolder}/../",
+                "-I/home/shane/Documents/VSCode/bewusstsein_libraries",
+                "-I/home/shane/Documents/bewusstsein_libs/packages/util-linux-libs-2.39.3-1-aarch64.pkg/usr/include"
+            ]
+        },
+        {
+            "label": "Neural Networks: Debug-Build Dropout Layer -> Linux Aarch64 C++",
+            "command": "/home/shane/Documents/bewusstsein_libs/compiler/arm-gnu-toolchain-13.2.rel1-x86_64-aarch64-none-linux-gnu/arm-gnu-toolchain-13.2.Rel1-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++",
+            "args": [
+                "-std=c++23",
+                "-fdiagnostics-color=always",
+                "-I/home/shane/Documents/bewusstsein_libs/compiler/arm-gnu-toolchain-13.2.rel1-x86_64-aarch64-none-linux-gnu/arm-gnu-toolchain-13.2.Rel1-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include",
+                "-g",
+                "-c",
+                "${workspaceFolder}/c++/source/layer/dropout.cpp",
+                "-o",
+                "${workspaceFolder}/c++/build/debug/aarch64/layer/dropout.o",
+                "-I${workspaceFolder}/../",
+                "-I/home/shane/Documents/VSCode/bewusstsein_libraries",
+                "-I/home/shane/Documents/bewusstsein_libs/packages/util-linux-libs-2.39.3-1-aarch64.pkg/usr/include"
+            ]
+        },
+        {
+            "label": "Neural Networks: Debug-Build Cost Layer -> Linux Aarch64 C++",
+            "command": "/home/shane/Documents/bewusstsein_libs/compiler/arm-gnu-toolchain-13.2.rel1-x86_64-aarch64-none-linux-gnu/arm-gnu-toolchain-13.2.Rel1-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++",
+            "args": [
+                "-std=c++23",
+                "-fdiagnostics-color=always",
+                "-I/home/shane/Documents/bewusstsein_libs/compiler/arm-gnu-toolchain-13.2.rel1-x86_64-aarch64-none-linux-gnu/arm-gnu-toolchain-13.2.Rel1-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include",
+                "-g",
+                "-c",
+                "${workspaceFolder}/c++/source/layer/cost.cpp",
+                "-o",
+                "${workspaceFolder}/c++/build/debug/aarch64/layer/cost.o",
+                "-I${workspaceFolder}/../",
+                "-I/home/shane/Documents/VSCode/bewusstsein_libraries",
+                "-I/home/shane/Documents/bewusstsein_libs/packages/util-linux-libs-2.39.3-1-aarch64.pkg/usr/include"
+            ]
+        },
+        {
+            "label": "Neural Networks: Debug-Build Translation Layer -> Linux Aarch64 C++",
+            "command": "/home/shane/Documents/bewusstsein_libs/compiler/arm-gnu-toolchain-13.2.rel1-x86_64-aarch64-none-linux-gnu/arm-gnu-toolchain-13.2.Rel1-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++",
+            "args": [
+                "-std=c++23",
+                "-fdiagnostics-color=always",
+                "-I/home/shane/Documents/bewusstsein_libs/compiler/arm-gnu-toolchain-13.2.rel1-x86_64-aarch64-none-linux-gnu/arm-gnu-toolchain-13.2.Rel1-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include",
+                "-g",
+                "-c",
+                "${workspaceFolder}/c++/source/layer/translation.cpp",
+                "-o",
+                "${workspaceFolder}/c++/build/debug/aarch64/layer/translation.o",
+                "-I${workspaceFolder}/../",
+                "-I/home/shane/Documents/VSCode/bewusstsein_libraries",
+                "-I/home/shane/Documents/bewusstsein_libs/packages/util-linux-libs-2.39.3-1-aarch64.pkg/usr/include"
+            ]
+        },
+        {
+            "label": "Neural Networks: Debug-Build Rotation Layer -> Linux Aarch64 C++",
+            "command": "/home/shane/Documents/bewusstsein_libs/compiler/arm-gnu-toolchain-13.2.rel1-x86_64-aarch64-none-linux-gnu/arm-gnu-toolchain-13.2.Rel1-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++",
+            "args": [
+                "-std=c++23",
+                "-fdiagnostics-color=always",
+                "-I/home/shane/Documents/bewusstsein_libs/compiler/arm-gnu-toolchain-13.2.rel1-x86_64-aarch64-none-linux-gnu/arm-gnu-toolchain-13.2.Rel1-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include",
+                "-g",
+                "-c",
+                "${workspaceFolder}/c++/source/layer/rotation.cpp",
+                "-o",
+                "${workspaceFolder}/c++/build/debug/aarch64/layer/rotation.o",
+                "-I${workspaceFolder}/../",
+                "-I/home/shane/Documents/VSCode/bewusstsein_libraries",
+                "-I/home/shane/Documents/bewusstsein_libs/packages/util-linux-libs-2.39.3-1-aarch64.pkg/usr/include"
+            ]
+        },
+        {
+            "label": "Neural Networks: Debug-Build Dilation Layer -> Linux Aarch64 C++",
+            "command": "/home/shane/Documents/bewusstsein_libs/compiler/arm-gnu-toolchain-13.2.rel1-x86_64-aarch64-none-linux-gnu/arm-gnu-toolchain-13.2.Rel1-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++",
+            "args": [
+                "-std=c++23",
+                "-fdiagnostics-color=always",
+                "-I/home/shane/Documents/bewusstsein_libs/compiler/arm-gnu-toolchain-13.2.rel1-x86_64-aarch64-none-linux-gnu/arm-gnu-toolchain-13.2.Rel1-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include",
+                "-g",
+                "-c",
+                "${workspaceFolder}/c++/source/layer/dilation.cpp",
+                "-o",
+                "${workspaceFolder}/c++/build/debug/aarch64/layer/dilation.o",
+                "-I${workspaceFolder}/../",
+                "-I/home/shane/Documents/VSCode/bewusstsein_libraries",
+                "-I/home/shane/Documents/bewusstsein_libs/packages/util-linux-libs-2.39.3-1-aarch64.pkg/usr/include"
+            ]
+        },
+        {
+            "label": "Neural Networks: Debug-Build Operations -> Linux Aarch64 C++",
+            "command": "/home/shane/Documents/bewusstsein_libs/compiler/arm-gnu-toolchain-13.2.rel1-x86_64-aarch64-none-linux-gnu/arm-gnu-toolchain-13.2.Rel1-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++",
+            "args": [
+                "-std=c++23",
+                "-fdiagnostics-color=always",
+                "-I/home/shane/Documents/bewusstsein_libs/compiler/arm-gnu-toolchain-13.2.rel1-x86_64-aarch64-none-linux-gnu/arm-gnu-toolchain-13.2.Rel1-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include",
+                "-g",
+                "-c",
+                "${workspaceFolder}/c++/source/bewusstsein_nn_ops.cpp",
+                "-o",
+                "${workspaceFolder}/c++/build/debug/aarch64/bewusstsein_nn_ops.o",
+                "-I${workspaceFolder}/../",
+                "-I/home/shane/Documents/VSCode/bewusstsein_libraries",
+                "-I/home/shane/Documents/bewusstsein_libs/packages/util-linux-libs-2.39.3-1-aarch64.pkg/usr/include"
+            ]
+        },
+        {
+            "label": "Neural Networks: Debug-Build All -> Linux Aarch64 C++",
+            "dependsOn": [
+                "Neural Networks: Debug-Build Base Layer -> Linux Aarch64 C++",
+                "Neural Networks: Debug-Build Node Layer -> Linux Aarch64 C++",
+                "Neural Networks: Debug-Build Bias Layer -> Linux Aarch64 C++",
+                "Neural Networks: Debug-Build Dense Layer -> Linux Aarch64 C++",
+                "Neural Networks: Debug-Build Convolution Layer -> Linux Aarch64 C++",
+                "Neural Networks: Debug-Build Pooling Layer -> Linux Aarch64 C++",
+                "Neural Networks: Debug-Build Normalization Layer -> Linux Aarch64 C++",
+                "Neural Networks: Debug-Build Softmax Layer -> Linux Aarch64 C++",
+                "Neural Networks: Debug-Build Activation Layer -> Linux Aarch64 C++",
+                "Neural Networks: Debug-Build Dropout Layer -> Linux Aarch64 C++",
+                "Neural Networks: Debug-Build Cost Layer -> Linux Aarch64 C++",
+                //"Neural Networks: Debug-Build Translation Layer -> Linux Aarch64 C++",
+                //"Neural Networks: Debug-Build Rotation Layer -> Linux Aarch64 C++",
+                //"Neural Networks: Debug-Build Dilation Layer -> Linux Aarch64 C++",
+                "Neural Networks: Debug-Build Operations -> Linux Aarch64 C++"
+            ],
+            "dependsOrder": "sequence"
+        },
+        {
+            "label": "Neural Networks: Debug-Archive All -> Linux Aarch64 C++",
+            "command": "/home/shane/Documents/bewusstsein_libs/compiler/arm-gnu-toolchain-13.2.rel1-x86_64-aarch64-none-linux-gnu/arm-gnu-toolchain-13.2.Rel1-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-ar",
+            "args": [
+                "rvs",
+                "${workspaceFolder}/c++/build/debug/aarch64/libbewusstsein_nn.so",
+                "${workspaceFolder}/c++/build/debug/aarch64/layer/base.o",
+                "${workspaceFolder}/c++/build/debug/aarch64/layer/node.o",
+                "${workspaceFolder}/c++/build/debug/aarch64/layer/bias.o",
+                "${workspaceFolder}/c++/build/debug/aarch64/layer/dense.o",
+                "${workspaceFolder}/c++/build/debug/aarch64/layer/convolution.o",
+                "${workspaceFolder}/c++/build/debug/aarch64/layer/pooling.o",
+                "${workspaceFolder}/c++/build/debug/aarch64/layer/normalization.o",
+                "${workspaceFolder}/c++/build/debug/aarch64/layer/softmax.o",
+                "${workspaceFolder}/c++/build/debug/aarch64/layer/activation.o",
+                "${workspaceFolder}/c++/build/debug/aarch64/layer/dropout.o",
+                "${workspaceFolder}/c++/build/debug/aarch64/layer/cost.o",
+                //"${workspaceFolder}/c++/build/debug/aarch64/layer/translation.o",
+                //"${workspaceFolder}/c++/build/debug/aarch64/layer/rotation.o",
+                //"${workspaceFolder}/c++/build/debug/aarch64/layer/dilation.o",
+                "${workspaceFolder}/c++/build/debug/aarch64/bewusstsein_nn_ops.o"
+            ]
+        },
+        {
+            "label": "Neural Networks: Debug-Build & Debug-Archive -> Linux Aarch64 C++",
+            "dependsOn": [
+                "Neural Networks: Debug-Build All -> Linux Aarch64 C++",
+                "Neural Networks: Debug-Archive All -> Linux Aarch64 C++"
+            ],
+            "dependsOrder": "sequence",
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "label": "Neural Networks: Release-Build Base Layer -> Linux Aarch64 C++",
+            "command": "/home/shane/Documents/bewusstsein_libs/compiler/arm-gnu-toolchain-13.2.rel1-x86_64-aarch64-none-linux-gnu/arm-gnu-toolchain-13.2.Rel1-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++",
+            "args": [
+                "-std=c++23",
+                "-fdiagnostics-color=always",
+                "-I/home/shane/Documents/bewusstsein_libs/compiler/arm-gnu-toolchain-13.2.rel1-x86_64-aarch64-none-linux-gnu/arm-gnu-toolchain-13.2.Rel1-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include",
+                "-mcpu=cortex-a53",
+                "-mtune=cortex-a53",
+                "-O3",
+                "-funroll-loops",
+                "-ffp-contract=fast",
+                "-ftree-vectorize",
+                "-c",
+                "${workspaceFolder}/c++/source/layer/base.cpp",
+                "-o",
+                "${workspaceFolder}/c++/build/release/aarch64/layer/base.o",
+                "-I${workspaceFolder}/../",
+                "-I/home/shane/Documents/VSCode/bewusstsein_libraries",
+                "-I/home/shane/Documents/bewusstsein_libs/packages/util-linux-libs-2.39.3-1-aarch64.pkg/usr/include"
+            ]
+        },
+        {
+            "label": "Neural Networks: Release-Build Node Layer -> Linux Aarch64 C++",
+            "command": "/home/shane/Documents/bewusstsein_libs/compiler/arm-gnu-toolchain-13.2.rel1-x86_64-aarch64-none-linux-gnu/arm-gnu-toolchain-13.2.Rel1-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++",
+            "args": [
+                "-std=c++23",
+                "-fdiagnostics-color=always",
+                "-I/home/shane/Documents/bewusstsein_libs/compiler/arm-gnu-toolchain-13.2.rel1-x86_64-aarch64-none-linux-gnu/arm-gnu-toolchain-13.2.Rel1-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include",
+                "-mcpu=cortex-a53",
+                "-mtune=cortex-a53",
+                "-O3",
+                "-funroll-loops",
+                "-ffp-contract=fast",
+                "-ftree-vectorize",
+                "-c",
+                "${workspaceFolder}/c++/source/layer/node.cpp",
+                "-o",
+                "${workspaceFolder}/c++/build/release/aarch64/layer/node.o",
+                "-I${workspaceFolder}/../",
+                "-I/home/shane/Documents/VSCode/bewusstsein_libraries",
+                "-I/home/shane/Documents/bewusstsein_libs/packages/util-linux-libs-2.39.3-1-aarch64.pkg/usr/include"
+            ]
+        },
+        {
+            "label": "Neural Networks: Release-Build Bias Layer -> Linux Aarch64 C++",
+            "command": "/home/shane/Documents/bewusstsein_libs/compiler/arm-gnu-toolchain-13.2.rel1-x86_64-aarch64-none-linux-gnu/arm-gnu-toolchain-13.2.Rel1-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++",
+            "args": [
+                "-std=c++23",
+                "-fdiagnostics-color=always",
+                "-I/home/shane/Documents/bewusstsein_libs/compiler/arm-gnu-toolchain-13.2.rel1-x86_64-aarch64-none-linux-gnu/arm-gnu-toolchain-13.2.Rel1-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include",
+                "-mcpu=cortex-a53",
+                "-mtune=cortex-a53",
+                "-O3",
+                "-funroll-loops",
+                "-ffp-contract=fast",
+                "-ftree-vectorize",
+                "-c",
+                "${workspaceFolder}/c++/source/layer/bias.cpp",
+                "-o",
+                "${workspaceFolder}/c++/build/release/aarch64/layer/bias.o",
+                "-I${workspaceFolder}/../",
+                "-I/home/shane/Documents/VSCode/bewusstsein_libraries",
+                "-I/home/shane/Documents/bewusstsein_libs/packages/util-linux-libs-2.39.3-1-aarch64.pkg/usr/include"
+            ]
+        },
+        {
+            "label": "Neural Networks: Release-Build Dense Layer -> Linux Aarch64 C++",
+            "command": "/home/shane/Documents/bewusstsein_libs/compiler/arm-gnu-toolchain-13.2.rel1-x86_64-aarch64-none-linux-gnu/arm-gnu-toolchain-13.2.Rel1-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++",
+            "args": [
+                "-std=c++23",
+                "-fdiagnostics-color=always",
+                "-I/home/shane/Documents/bewusstsein_libs/compiler/arm-gnu-toolchain-13.2.rel1-x86_64-aarch64-none-linux-gnu/arm-gnu-toolchain-13.2.Rel1-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include",
+                "-mcpu=cortex-a53",
+                "-mtune=cortex-a53",
+                "-O3",
+                "-funroll-loops",
+                "-ffp-contract=fast",
+                "-ftree-vectorize",
+                "-c",
+                "${workspaceFolder}/c++/source/layer/dense.cpp",
+                "-o",
+                "${workspaceFolder}/c++/build/release/aarch64/layer/dense.o",
+                "-I${workspaceFolder}/../",
+                "-I/home/shane/Documents/VSCode/bewusstsein_libraries",
+                "-I/home/shane/Documents/bewusstsein_libs/packages/util-linux-libs-2.39.3-1-aarch64.pkg/usr/include"
+            ]
+        },
+        {
+            "label": "Neural Networks: Release-Build Convolution Layer -> Linux Aarch64 C++",
+            "command": "/home/shane/Documents/bewusstsein_libs/compiler/arm-gnu-toolchain-13.2.rel1-x86_64-aarch64-none-linux-gnu/arm-gnu-toolchain-13.2.Rel1-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++",
+            "args": [
+                "-std=c++23",
+                "-fdiagnostics-color=always",
+                "-I/home/shane/Documents/bewusstsein_libs/compiler/arm-gnu-toolchain-13.2.rel1-x86_64-aarch64-none-linux-gnu/arm-gnu-toolchain-13.2.Rel1-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include",
+                "-mcpu=cortex-a53",
+                "-mtune=cortex-a53",
+                "-O3",
+                "-funroll-loops",
+                "-ffp-contract=fast",
+                "-ftree-vectorize",
+                "-c",
+                "${workspaceFolder}/c++/source/layer/convolution.cpp",
+                "-o",
+                "${workspaceFolder}/c++/build/release/aarch64/layer/convolution.o",
+                "-I${workspaceFolder}/../",
+                "-I/home/shane/Documents/VSCode/bewusstsein_libraries",
+                "-I/home/shane/Documents/bewusstsein_libs/packages/util-linux-libs-2.39.3-1-aarch64.pkg/usr/include"
+            ]
+        },
+        {
+            "label": "Neural Networks: Release-Build Pooling Layer -> Linux Aarch64 C++",
+            "command": "/home/shane/Documents/bewusstsein_libs/compiler/arm-gnu-toolchain-13.2.rel1-x86_64-aarch64-none-linux-gnu/arm-gnu-toolchain-13.2.Rel1-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++",
+            "args": [
+                "-std=c++23",
+                "-fdiagnostics-color=always",
+                "-I/home/shane/Documents/bewusstsein_libs/compiler/arm-gnu-toolchain-13.2.rel1-x86_64-aarch64-none-linux-gnu/arm-gnu-toolchain-13.2.Rel1-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include",
+                "-mcpu=cortex-a53",
+                "-mtune=cortex-a53",
+                "-O3",
+                "-funroll-loops",
+                "-ffp-contract=fast",
+                "-ftree-vectorize",
+                "-c",
+                "${workspaceFolder}/c++/source/layer/pooling.cpp",
+                "-o",
+                "${workspaceFolder}/c++/build/release/aarch64/layer/pooling.o",
+                "-I${workspaceFolder}/../",
+                "-I/home/shane/Documents/VSCode/bewusstsein_libraries",
+                "-I/home/shane/Documents/bewusstsein_libs/packages/util-linux-libs-2.39.3-1-aarch64.pkg/usr/include"
+            ]
+        },
+        {
+            "label": "Neural Networks: Release-Build Normalization Layer -> Linux Aarch64 C++",
+            "command": "/home/shane/Documents/bewusstsein_libs/compiler/arm-gnu-toolchain-13.2.rel1-x86_64-aarch64-none-linux-gnu/arm-gnu-toolchain-13.2.Rel1-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++",
+            "args": [
+                "-std=c++23",
+                "-fdiagnostics-color=always",
+                "-I/home/shane/Documents/bewusstsein_libs/compiler/arm-gnu-toolchain-13.2.rel1-x86_64-aarch64-none-linux-gnu/arm-gnu-toolchain-13.2.Rel1-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include",
+                "-mcpu=cortex-a53",
+                "-mtune=cortex-a53",
+                "-O3",
+                "-funroll-loops",
+                "-ffp-contract=fast",
+                "-ftree-vectorize",
+                "-c",
+                "${workspaceFolder}/c++/source/layer/normalization.cpp",
+                "-o",
+                "${workspaceFolder}/c++/build/release/aarch64/layer/normalization.o",
+                "-I${workspaceFolder}/../",
+                "-I/home/shane/Documents/VSCode/bewusstsein_libraries",
+                "-I/home/shane/Documents/bewusstsein_libs/packages/util-linux-libs-2.39.3-1-aarch64.pkg/usr/include"
+            ]
+        },
+        {
+            "label": "Neural Networks: Release-Build Softmax Layer -> Linux Aarch64 C++",
+            "command": "/home/shane/Documents/bewusstsein_libs/compiler/arm-gnu-toolchain-13.2.rel1-x86_64-aarch64-none-linux-gnu/arm-gnu-toolchain-13.2.Rel1-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++",
+            "args": [
+                "-std=c++23",
+                "-fdiagnostics-color=always",
+                "-I/home/shane/Documents/bewusstsein_libs/compiler/arm-gnu-toolchain-13.2.rel1-x86_64-aarch64-none-linux-gnu/arm-gnu-toolchain-13.2.Rel1-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include",
+                "-mcpu=cortex-a53",
+                "-mtune=cortex-a53",
+                "-O3",
+                "-funroll-loops",
+                "-ffp-contract=fast",
+                "-ftree-vectorize",
+                "-c",
+                "${workspaceFolder}/c++/source/layer/softmax.cpp",
+                "-o",
+                "${workspaceFolder}/c++/build/release/aarch64/layer/softmax.o",
+                "-I${workspaceFolder}/../",
+                "-I/home/shane/Documents/VSCode/bewusstsein_libraries",
+                "-I/home/shane/Documents/bewusstsein_libs/packages/util-linux-libs-2.39.3-1-aarch64.pkg/usr/include"
+            ]
+        },
+        {
+            "label": "Neural Networks: Release-Build Activation Layer -> Linux Aarch64 C++",
+            "command": "/home/shane/Documents/bewusstsein_libs/compiler/arm-gnu-toolchain-13.2.rel1-x86_64-aarch64-none-linux-gnu/arm-gnu-toolchain-13.2.Rel1-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++",
+            "args": [
+                "-std=c++23",
+                "-fdiagnostics-color=always",
+                "-I/home/shane/Documents/bewusstsein_libs/compiler/arm-gnu-toolchain-13.2.rel1-x86_64-aarch64-none-linux-gnu/arm-gnu-toolchain-13.2.Rel1-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include",
+                "-mcpu=cortex-a53",
+                "-mtune=cortex-a53",
+                "-O3",
+                "-funroll-loops",
+                "-ffp-contract=fast",
+                "-ftree-vectorize",
+                "-c",
+                "${workspaceFolder}/c++/source/layer/activation.cpp",
+                "-o",
+                "${workspaceFolder}/c++/build/release/aarch64/layer/activation.o",
+                "-I${workspaceFolder}/../",
+                "-I/home/shane/Documents/VSCode/bewusstsein_libraries",
+                "-I/home/shane/Documents/bewusstsein_libs/packages/util-linux-libs-2.39.3-1-aarch64.pkg/usr/include"
+            ]
+        },
+        {
+            "label": "Neural Networks: Release-Build Dropout Layer -> Linux Aarch64 C++",
+            "command": "/home/shane/Documents/bewusstsein_libs/compiler/arm-gnu-toolchain-13.2.rel1-x86_64-aarch64-none-linux-gnu/arm-gnu-toolchain-13.2.Rel1-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++",
+            "args": [
+                "-std=c++23",
+                "-fdiagnostics-color=always",
+                "-I/home/shane/Documents/bewusstsein_libs/compiler/arm-gnu-toolchain-13.2.rel1-x86_64-aarch64-none-linux-gnu/arm-gnu-toolchain-13.2.Rel1-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include",
+                "-mcpu=cortex-a53",
+                "-mtune=cortex-a53",
+                "-O3",
+                "-funroll-loops",
+                "-ffp-contract=fast",
+                "-ftree-vectorize",
+                "-c",
+                "${workspaceFolder}/c++/source/layer/dropout.cpp",
+                "-o",
+                "${workspaceFolder}/c++/build/release/aarch64/layer/dropout.o",
+                "-I${workspaceFolder}/../",
+                "-I/home/shane/Documents/VSCode/bewusstsein_libraries",
+                "-I/home/shane/Documents/bewusstsein_libs/packages/util-linux-libs-2.39.3-1-aarch64.pkg/usr/include"
+            ]
+        },
+        {
+            "label": "Neural Networks: Release-Build Cost Layer -> Linux Aarch64 C++",
+            "command": "/home/shane/Documents/bewusstsein_libs/compiler/arm-gnu-toolchain-13.2.rel1-x86_64-aarch64-none-linux-gnu/arm-gnu-toolchain-13.2.Rel1-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++",
+            "args": [
+                "-std=c++23",
+                "-fdiagnostics-color=always",
+                "-I/home/shane/Documents/bewusstsein_libs/compiler/arm-gnu-toolchain-13.2.rel1-x86_64-aarch64-none-linux-gnu/arm-gnu-toolchain-13.2.Rel1-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include",
+                "-mcpu=cortex-a53",
+                "-mtune=cortex-a53",
+                "-O3",
+                "-funroll-loops",
+                "-ffp-contract=fast",
+                "-ftree-vectorize",
+                "-c",
+                "${workspaceFolder}/c++/source/layer/cost.cpp",
+                "-o",
+                "${workspaceFolder}/c++/build/release/aarch64/layer/cost.o",
+                "-I${workspaceFolder}/../",
+                "-I/home/shane/Documents/VSCode/bewusstsein_libraries",
+                "-I/home/shane/Documents/bewusstsein_libs/packages/util-linux-libs-2.39.3-1-aarch64.pkg/usr/include"
+            ]
+        },
+        {
+            "label": "Neural Networks: Release-Build Translation Layer -> Linux Aarch64 C++",
+            "command": "/home/shane/Documents/bewusstsein_libs/compiler/arm-gnu-toolchain-13.2.rel1-x86_64-aarch64-none-linux-gnu/arm-gnu-toolchain-13.2.Rel1-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++",
+            "args": [
+                "-std=c++23",
+                "-fdiagnostics-color=always",
+                "-I/home/shane/Documents/bewusstsein_libs/compiler/arm-gnu-toolchain-13.2.rel1-x86_64-aarch64-none-linux-gnu/arm-gnu-toolchain-13.2.Rel1-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include",
+                "-mcpu=cortex-a53",
+                "-mtune=cortex-a53",
+                "-O3",
+                "-funroll-loops",
+                "-ffp-contract=fast",
+                "-ftree-vectorize",
+                "-c",
+                "${workspaceFolder}/c++/source/layer/translation.cpp",
+                "-o",
+                "${workspaceFolder}/c++/build/release/aarch64/layer/translation.o",
+                "-I${workspaceFolder}/../",
+                "-I/home/shane/Documents/VSCode/bewusstsein_libraries",
+                "-I/home/shane/Documents/bewusstsein_libs/packages/util-linux-libs-2.39.3-1-aarch64.pkg/usr/include"
+            ]
+        },
+        {
+            "label": "Neural Networks: Release-Build Rotation Layer -> Linux Aarch64 C++",
+            "command": "/home/shane/Documents/bewusstsein_libs/compiler/arm-gnu-toolchain-13.2.rel1-x86_64-aarch64-none-linux-gnu/arm-gnu-toolchain-13.2.Rel1-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++",
+            "args": [
+                "-std=c++23",
+                "-fdiagnostics-color=always",
+                "-I/home/shane/Documents/bewusstsein_libs/compiler/arm-gnu-toolchain-13.2.rel1-x86_64-aarch64-none-linux-gnu/arm-gnu-toolchain-13.2.Rel1-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include",
+                "-mcpu=cortex-a53",
+                "-mtune=cortex-a53",
+                "-O3",
+                "-funroll-loops",
+                "-ffp-contract=fast",
+                "-ftree-vectorize",
+                "-c",
+                "${workspaceFolder}/c++/source/layer/rotation.cpp",
+                "-o",
+                "${workspaceFolder}/c++/build/release/aarch64/layer/rotation.o",
+                "-I${workspaceFolder}/../",
+                "-I/home/shane/Documents/VSCode/bewusstsein_libraries",
+                "-I/home/shane/Documents/bewusstsein_libs/packages/util-linux-libs-2.39.3-1-aarch64.pkg/usr/include"
+            ]
+        },
+        {
+            "label": "Neural Networks: Release-Build Dilation Layer -> Linux Aarch64 C++",
+            "command": "/home/shane/Documents/bewusstsein_libs/compiler/arm-gnu-toolchain-13.2.rel1-x86_64-aarch64-none-linux-gnu/arm-gnu-toolchain-13.2.Rel1-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++",
+            "args": [
+                "-std=c++23",
+                "-fdiagnostics-color=always",
+                "-I/home/shane/Documents/bewusstsein_libs/compiler/arm-gnu-toolchain-13.2.rel1-x86_64-aarch64-none-linux-gnu/arm-gnu-toolchain-13.2.Rel1-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include",
+                "-mcpu=cortex-a53",
+                "-mtune=cortex-a53",
+                "-O3",
+                "-funroll-loops",
+                "-ffp-contract=fast",
+                "-ftree-vectorize",
+                "-c",
+                "${workspaceFolder}/c++/source/layer/dilation.cpp",
+                "-o",
+                "${workspaceFolder}/c++/build/release/aarch64/layer/dilation.o",
+                "-I${workspaceFolder}/../",
+                "-I/home/shane/Documents/VSCode/bewusstsein_libraries",
+                "-I/home/shane/Documents/bewusstsein_libs/packages/util-linux-libs-2.39.3-1-aarch64.pkg/usr/include"
+            ]
+        },
+        {
+            "label": "Neural Networks: Release-Build Operations -> Linux Aarch64 C++",
+            "command": "/home/shane/Documents/bewusstsein_libs/compiler/arm-gnu-toolchain-13.2.rel1-x86_64-aarch64-none-linux-gnu/arm-gnu-toolchain-13.2.Rel1-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-g++",
+            "args": [
+                "-std=c++23",
+                "-fdiagnostics-color=always",
+                "-I/home/shane/Documents/bewusstsein_libs/compiler/arm-gnu-toolchain-13.2.rel1-x86_64-aarch64-none-linux-gnu/arm-gnu-toolchain-13.2.Rel1-x86_64-aarch64-none-linux-gnu/aarch64-none-linux-gnu/include",
+                "-mcpu=cortex-a53",
+                "-mtune=cortex-a53",
+                "-O3",
+                "-funroll-loops",
+                "-ffp-contract=fast",
+                "-ftree-vectorize",
+                "-c",
+                "${workspaceFolder}/c++/source/bewusstsein_nn_ops.cpp",
+                "-o",
+                "${workspaceFolder}/c++/build/release/aarch64/bewusstsein_nn_ops.o",
+                "-I${workspaceFolder}/../",
+                "-I/home/shane/Documents/VSCode/bewusstsein_libraries",
+                "-I/home/shane/Documents/bewusstsein_libs/packages/util-linux-libs-2.39.3-1-aarch64.pkg/usr/include"
+            ]
+        },
+        {
+            "label": "Neural Networks: Release-Build All -> Linux Aarch64 C++",
+            "dependsOn": [
+                "Neural Networks: Release-Build Base Layer -> Linux Aarch64 C++",
+                "Neural Networks: Release-Build Node Layer -> Linux Aarch64 C++",
+                "Neural Networks: Release-Build Bias Layer -> Linux Aarch64 C++",
+                "Neural Networks: Release-Build Dense Layer -> Linux Aarch64 C++",
+                "Neural Networks: Release-Build Convolution Layer -> Linux Aarch64 C++",
+                "Neural Networks: Release-Build Pooling Layer -> Linux Aarch64 C++",
+                "Neural Networks: Release-Build Normalization Layer -> Linux Aarch64 C++",
+                "Neural Networks: Release-Build Softmax Layer -> Linux Aarch64 C++",
+                "Neural Networks: Release-Build Activation Layer -> Linux Aarch64 C++",
+                "Neural Networks: Release-Build Dropout Layer -> Linux Aarch64 C++",
+                "Neural Networks: Release-Build Cost Layer -> Linux Aarch64 C++",
+                //"Neural Networks: Release-Build Translation Layer -> Linux Aarch64 C++",
+                //"Neural Networks: Release-Build Rotation Layer -> Linux Aarch64 C++",
+                //"Neural Networks: Release-Build Dilation Layer -> Linux Aarch64 C++",
+                "Neural Networks: Release-Build Operations -> Linux Aarch64 C++"
+            ],
+            "dependsOrder": "sequence"
+        },
+        {
+            "label": "Neural Networks: Release-Archive All -> Linux Aarch64 C++",
+            "command": "/home/shane/Documents/bewusstsein_libs/compiler/arm-gnu-toolchain-13.2.rel1-x86_64-aarch64-none-linux-gnu/arm-gnu-toolchain-13.2.Rel1-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-ar",
+            "args": [
+                "rvs",
+                "${workspaceFolder}/c++/build/release/aarch64/libbewusstsein_nn.so",
+                "${workspaceFolder}/c++/build/release/aarch64/layer/base.o",
+                "${workspaceFolder}/c++/build/release/aarch64/layer/node.o",
+                "${workspaceFolder}/c++/build/release/aarch64/layer/bias.o",
+                "${workspaceFolder}/c++/build/release/aarch64/layer/dense.o",
+                "${workspaceFolder}/c++/build/release/aarch64/layer/convolution.o",
+                "${workspaceFolder}/c++/build/release/aarch64/layer/pooling.o",
+                "${workspaceFolder}/c++/build/release/aarch64/layer/normalization.o",
+                "${workspaceFolder}/c++/build/release/aarch64/layer/softmax.o",
+                "${workspaceFolder}/c++/build/release/aarch64/layer/activation.o",
+                "${workspaceFolder}/c++/build/release/aarch64/layer/dropout.o",
+                "${workspaceFolder}/c++/build/release/aarch64/layer/cost.o",
+                //"${workspaceFolder}/c++/build/release/aarch64/layer/translation.o",
+                //"${workspaceFolder}/c++/build/release/aarch64/layer/rotation.o",
+                //"${workspaceFolder}/c++/build/release/aarch64/layer/dilation.o",
+                "${workspaceFolder}/c++/build/release/aarch64/bewusstsein_nn_ops.o"
+            ]
+        },
+        {
+            "label": "Neural Networks: Release-Build & Release-Archive -> Linux Aarch64 C++",
+            "dependsOn": [
+                "Neural Networks: Release-Build All -> Linux Aarch64 C++",
+                "Neural Networks: Release-Archive All -> Linux Aarch64 C++"
+            ],
+            "dependsOrder": "sequence",
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+
+        
+
+        {
+            "type": "cppbuild",
+            "label": "C/C++: g++ debug build active file",
+            "command": "/usr/bin/g++",
+            "args": [
+                "-std=c++23",
+                "-fdiagnostics-color=always",
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}",
+                "-I${workspaceFolder}/../",
+                "-L${workspaceFolder}/c++/build/debug/x64",
+                "-lbewusstsein_nn",
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "Task generated by Debugger."
+        }
+    ],
+    "version": "2.0.0"
+}
