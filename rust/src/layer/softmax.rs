@@ -12,6 +12,7 @@ use crate::layer::{
     node::NodeLayer
 };
 
+/*
 #[derive( Clone, Default, Debug )]
 pub struct SoftmaxLayer;
 
@@ -46,16 +47,5 @@ where
         let _ = output_delta;
         let _ = input_delta;
     }
-
-    fn grad_descent( &mut self, _: &Tensor<T, 0, Stack<0>> ) {
-        panic!( "Not implemented" );
-    }
-
-    fn grad_descent_momentum( &mut self, _: &Tensor<T, 0, Stack<0>>, _: &mut Tensor<T, 0, Stack<0>> ) {
-        panic!( "Not implemented" );
-    }
-
-    fn grad_descent_adam( &mut self, _: &Tensor<T, 0, Stack<0>>, _: &mut Tensor<T, 0, Stack<0>>, _: &mut Tensor<T, 0, Stack<0>> ) {
-        panic!( "Not implemented" );
-    }
 }
+*/

@@ -53,15 +53,9 @@ where
     Memory<T, M>: MemoryTraits<Type = T>,
     Tensor<T, 4, M>: TensorTraits<T, 4, M>
 {
-    fn new( shape: Shape<4> ) -> Self {
+    fn new( shape: Shape<4>, memory: <Memory<T, M> as MemoryTraits>::New ) -> Self {
         Self {
-            params: Tensor::<T, 4, M>::new( shape ),
-        }
-    }
-
-    fn take( shape: Shape<4>, memory: <Memory<T, M> as MemoryTraits>::Take ) -> Self {
-        Self {
-            params: Tensor::<T, 4, M>::take( shape, memory ),
+            params: Tensor::<T, 4, M>::new( shape, memory ),
         }
     }
 
@@ -84,18 +78,10 @@ where
         let _ = grad;
     }
 
-    fn grad_descent( &mut self, grad: &Tensor<T, 4, M> ) {
-        let _ = grad;
+    fn iter( &self ) -> impl Iterator<Item = &T> {
+        self.params.iter()
     }
-
-    fn grad_descent_momentum( &mut self, grad: &Tensor<T, 4, M>, momentum: &mut Tensor<T, 4, M> ) {
-        let _ = grad;
-        let _ = momentum;
-    }
-
-    fn grad_descent_adam( &mut self, grad: &Tensor<T, 4, M>, momentum: &mut Tensor<T, 4, M>, velocity: &mut Tensor<T, 4, M> ) {
-        let _ = grad;
-        let _ = momentum;
-        let _ = velocity;
+    fn iter_mut( &mut self ) -> impl Iterator<Item = &mut T> {
+        self.params.iter_mut()
     }
 }

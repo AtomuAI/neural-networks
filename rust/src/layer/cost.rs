@@ -12,6 +12,7 @@ use crate::layer::{
     node::NodeLayer
 };
 
+/*
 #[derive( Clone, Default, Debug )]
 pub struct ActivationLayer;
 
@@ -47,15 +48,11 @@ where
         let _ = input_delta;
     }
 
-    fn grad_descent( &mut self, _: &Tensor<T, 0, Stack<0>> ) {
-        panic!( "Not implemented" );
+    fn iter( &self ) -> impl Iterator<Item = &T> {
+        panic!( "ActivationLayer does not have any parameters" )
     }
-
-    fn grad_descent_momentum( &mut self, _: &Tensor<T, 0, Stack<0>>, _: &mut Tensor<T, 0, Stack<0>> ) {
-        panic!( "Not implemented" );
-    }
-
-    fn grad_descent_adam( &mut self, _: &Tensor<T, 0, Stack<0>>, _: &mut Tensor<T, 0, Stack<0>>, _: &mut Tensor<T, 0, Stack<0>> ) {
-        panic!( "Not implemented" );
+    fn iter_mut( &mut self ) -> impl Iterator<Item = &mut T> {
+        panic!( "ActivationLayer does not have any parameters" )
     }
 }
+*/

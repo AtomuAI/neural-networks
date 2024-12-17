@@ -1,51 +1,109 @@
 // Copyright 2024 Bewusstsein Labs
 
-use std::fmt::Debug;
+use std::{
+    fmt::Debug,
+    ops::{ Add, Sub, Mul, Div, AddAssign }
+};
+use num::traits::{ Pow, FromPrimitive };
 
 use memory::{ Memory, MemoryTraits, MemoryType, stack::Stack, heap::Heap };
 use linear_algebra::{ tensor::{ Tensor, TensorTraits }, shape::Shape };
 use crate::layer::node::NodeLayer;
 
-pub mod activation;
+//pub mod activation;
 pub mod bias;
-pub mod convolution;
-pub mod cost;
+//pub mod convolution;
+//pub mod cost;
 pub mod dense;
-pub mod dropout;
-pub mod mask;
+//pub mod dropout;
+//pub mod mask;
 pub mod node;
-pub mod normalization;
-pub mod pooling;
-pub mod softmax;
+//pub mod normalization;
+//pub mod pooling;
+//pub mod softmax;
 
-pub trait Layer<T, const N: usize, M>
-where
-    T: 'static + Default + Debug + Clone + Copy + PartialEq,
-    M: MemoryType,
-    Memory<T, M>: MemoryTraits<Type = T>
-{
-    fn new( shape: Shape<N> ) -> Self;
-    fn take( shape: Shape<N>, memory: <Memory<T, M> as MemoryTraits>::Take ) -> Self;
-
-    fn inference<O, P>( &self, input: &NodeLayer<T, O>, output: &mut NodeLayer<T, P> )
-    where
-        O: MemoryType,
-        P: MemoryType,
-        Memory<T, O>: MemoryTraits<Type = T>,
-        Memory<T, P>: MemoryTraits<Type = T>,
-        Tensor<T, 5, O>: TensorTraits<T, 5, O>,
-        Tensor<T, 5, P>: TensorTraits<T, 5, P>;
-
-    fn backprop<O, P>( &self, output: &NodeLayer<T, P>, input: &mut NodeLayer<T, O>, output_delta: &Tensor<T, 5, P>, input_delta: &mut Tensor<T, 5, O>, grad: &mut Tensor<T, N, M> )
-    where
-        O: MemoryType,
-        P: MemoryType,
-        Memory<T, O>: MemoryTraits<Type = T>,
-        Memory<T, P>: MemoryTraits<Type = T>,
-        Tensor<T, 5, O>: TensorTraits<T, 5, O>,
-        Tensor<T, 5, P>: TensorTraits<T, 5, P>;
-
-    fn grad_descent( &mut self, grad: &Tensor<T, N, M> );
-    fn grad_descent_momentum( &mut self, grad: &Tensor<T, N, M>, momentum: &mut Tensor<T, N, M> );
-    fn grad_descent_adam( &mut self, grad: &Tensor<T, N, M>, momentum: &mut Tensor<T, N, M>, velocity: &mut Tensor<T, N, M> );
+pub trait Inference<Input, Output> {
+    fn inference( &self, input: &Input, output: &mut Output );
 }
+
+pub trait InferenceAssign<Input> {
+    fn inference_assign( &self, input: &mut Input );
+}
+
+pub trait Backprop<Input, Output, InputDelta, OutputDelta, Gradient> {
+    fn backprop( &self, input: &Input, output: &Output, input_delta: &InputDelta, output_delta: &mut OutputDelta, grad: &mut Gradient );
+}
+
+pub trait BackpropAssign<Output, OutputDelta, Gradient> {
+    fn backprop_assign( &self, output: &Output, output_delta: &mut OutputDelta, grad: &mut Gradient );
+}
+
+pub trait GradientDecent<T, Gradient> {
+    fn grad_descent( &mut self, step: T, grad: &Gradient );
+}
+
+pub trait GradientDescentMomentum<T, Gradient> {
+    fn grad_descent_momentum( &mut self, step: T, grad: &Gradient, momentum: &mut Gradient );
+}
+
+pub trait GradientDescentAdam<T, Time, Gradient>
+{
+    fn grad_descent_adam( &mut self, step: T, time: Time, beta_m: T, beta_v: T, epsilon: T, grad: &Gradient, momentum: &mut Gradient, velocity: &mut Gradient );
+}
+
+impl<T, const DIM: usize, M> GradientDecent<T, Tensor<T, DIM, M>> for Tensor<T, DIM, M>
+where
+    T: Default + Debug + Copy + Mul<Output = T> + AddAssign,
+    M: MemoryType,
+    Memory<T, M>: MemoryTraits<Type = T>,
+    Tensor<T, DIM, M>: TensorTraits<T, DIM, M>
+{
+    fn grad_descent( &mut self, step: T, grad: &Tensor<T, DIM, M> ) {
+        self.iter_mut().zip( grad.iter() ).for_each( |( param, &grad )| {
+            *param += step * grad;
+        });
+    }
+}
+
+impl<T, const DIM: usize, M> GradientDescentMomentum<T, Tensor<T, DIM, M>> for Tensor<T, DIM, M>
+where
+    T: Default + Debug + Copy + Mul<Output = T> + Add<Output = T> + AddAssign,
+    M: MemoryType,
+    Memory<T, M>: MemoryTraits<Type = T>,
+    Tensor<T, DIM, M>: TensorTraits<T, DIM, M>
+{
+    fn grad_descent_momentum( &mut self, step: T, grad: &Tensor<T, DIM, M>, momentum: &mut Tensor<T, DIM, M> ) {
+        self.iter_mut().zip( grad.iter() ).zip( momentum.iter_mut() ).for_each( |( ( param, &grad ), momentum )| {
+            *param += step * ( *momentum + grad );
+            *momentum = grad;
+        });
+    }
+}
+
+impl<T, Time, const DIM: usize, M> GradientDescentAdam<T, Time, Tensor<T, DIM, M>> for Tensor<T, DIM, M>
+where
+    T: Default + Debug + Copy + Add<Output = T> + Sub<Output = T> + Mul<Output = T> + Div<Output = T> + AddAssign + Pow<T, Output = T> + Pow<Time, Output = T> + Pow<i32, Output = T> + Pow<f32, Output = T> + FromPrimitive,
+    Time: Copy,
+    M: MemoryType,
+    Memory<T, M>: MemoryTraits<Type = T>,
+    Tensor<T, DIM, M>: TensorTraits<T, DIM, M>
+{
+    fn grad_descent_adam( &mut self, step: T, time: Time, beta_m: T, beta_v: T, epsilon: T, grad: &Tensor<T, DIM, M>, momentum: &mut Tensor<T, DIM, M>, velocity: &mut Tensor<T, DIM, M> ) {
+        let beta_m_subpow = T::from_i32( 1 ).unwrap() - beta_m.pow( time );
+        let beta_v_subpow = T::from_i32( 1 ).unwrap() - beta_v.pow( time );
+        let beta_m_sub = T::from_i32( 1 ).unwrap() - beta_m;
+        let beta_v_sub = T::from_i32( 1 ).unwrap() - beta_v;
+
+        self.iter_mut().zip( grad.iter() ).zip( momentum.iter_mut() ).zip( velocity.iter_mut() ).for_each( |( ( ( param, &grad ), momentum ), velocity ) | {
+            *momentum = ( beta_m * *momentum ) + ( beta_m_sub * grad );
+            *velocity = ( beta_v * *velocity ) + ( beta_v_sub * grad.pow( 2 ) );
+
+            let momentum_hat = *momentum / beta_m_subpow;
+            let velocity_hat = *velocity / beta_v_subpow;
+
+            *param += step * ( momentum_hat / ( velocity_hat.pow( 0.5 ) + epsilon ) );
+        });
+    }
+}
+
+pub trait Layer {}
