@@ -56,18 +56,16 @@ impl<T> Izhikevich<T> {
         a * ( ( b * v ) - u )
     }
 
-    pub fn update( &mut self, step: T, a: T, b: T, c: T, d: T, e: T, f: T, g: T, vt: T, i: T ) -> T
+    pub fn update( &mut self, step: T, a: T, b: T, c: T, d: T, e: T, f: T, g: T, vt: T, i: T )
     where
         T: Num + Copy + Add<Output = T> + Sub<Output = T> + Mul<Output = T> + AddAssign + PartialOrd + Pow<i32, Output = T> + FromPrimitive
     {
         if self.v < vt {
             self.v += step * Self::potential( e, f, g, self.v, self.u, i );
             self.u += step * Self::recovery( a, b, self.v, self.u );
-            self.v
         } else {
             self.v = c;
             self.u += d;
-            self.v
         }
     }
 }
@@ -88,11 +86,11 @@ mod tests {
         let g = 140.0;
         let vt = 30.0;
         let i = 14.0;
-        let mut izhikevich = Izhikevich::new( c, b * c );
+        let mut izh = Izhikevich::new( c, b * c );
 
         for _ in 0..1000 {
-            let v = izhikevich.update( step, a, b, c, d, e, f, g, vt, i );
-            println!( "{}", v );
+            izh.update( step, a, b, c, d, e, f, g, vt, i );
+            println!( "{}", izh.v() );
         }
     }
 }
