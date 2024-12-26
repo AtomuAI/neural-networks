@@ -11,3 +11,6 @@ thiserror = "2.0.3"
 memory = { path = "../../memory/rust" }
 linear-algebra = { path = "../../linear-algebra/rust" }
 num = "0.4.3"
+
+[dev-dependencies]
+pgfplots = "0.5.1"

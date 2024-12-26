@@ -4,7 +4,7 @@ use std::{
     ops::{ Add, Sub, Mul, AddAssign },
     cmp::PartialOrd
 };
-use num::traits::{ Num, Pow, FromPrimitive };
+use num::traits::{ Num, Pow, FromPrimitive, ToPrimitive };
 
 /// Izhikevich neuron model
 ///
@@ -92,5 +92,34 @@ mod tests {
             izh.update( step, a, b, c, d, e, f, g, vt, i );
             println!( "{}", izh.v() );
         }
+    }
+
+    #[test]
+    fn test_izhikevich_plot() {
+        use pgfplots::{axis::plot::Plot2D, Engine, Picture};
+        let step = 0.1;
+        let a = 0.02;
+        let b = 0.2;
+        let c = -65.0;
+        let d = 8.0;
+        let e = 0.04;
+        let f = 5.0;
+        let g = 140.0;
+        let vt = 30.0;
+        let i = 10.0;
+        let mut izh = Izhikevich::new( c, b * c );
+
+        let mut plot_v = Plot2D::new();
+
+        for t in 0..1000 {
+            izh.update( step, a, b, c, d, e, f, g, vt, i );
+            let time = t as f64 * step;
+            plot_v.coordinates.push( ( time, izh.v() ).into() );
+        }
+
+        let mut picture = Picture::new();
+        picture.axes.push( plot_v.into() );
+
+        picture.to_pdf( "../", "izhikevich_plot", Engine::PdfLatex ).unwrap();
     }
 }
