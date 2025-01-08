@@ -7,7 +7,14 @@ use std::{
 use num::traits::{ Pow, FromPrimitive };
 
 use memory::{ Memory, MemoryTraits, MemoryType, stack::Stack, heap::Heap };
-use linear_algebra::{ tensor::{ Tensor, TensorTraits, contract }, shape::Shape };
+use linear_algebra::{
+    ops::ContractAssignTo,
+    shape::Shape,
+    tensor::{ Tensor, TensorTraits },
+    traits::{
+        DynReOrder, DynReShapeable, DynShaped, Flatten
+    }
+};
 use crate::layer::{
     Layer,
     Inference,
@@ -87,32 +94,35 @@ where
     P: MemoryType,
     Memory<T, M>: MemoryTraits<Type = T>,
     Memory<T, O>: MemoryTraits<Type = T>,
-    Memory<T, P>: MemoryTraits<Type = T>,
+    Memory<T, P>: MemoryTraits<Type = T> + Default,
     Tensor<T, 2, M>: TensorTraits<T, 2, M>,
     Tensor<T, 5, O>: TensorTraits<T, 5, O>,
-    Tensor<T, 5, P>: TensorTraits<T, 5, P>
+    Tensor<T, 5, P>: TensorTraits<T, 5, P>,
+    for<'b> &'b Tensor<T, 2, M>: ContractAssignTo<1, &'b Tensor<T, 5, O>, Tensor<T, 5, P>>,
 {
     fn inference( &self, input: &NodeLayer<T, O>, output: &mut NodeLayer<T, P> ) {
-        contract( &self.weights, & **input, &mut **output, &[1], &[0] );
+        (&self.weights).contract_assign_to( [ 1 ], [ 0 ], &(**input), &mut (**output) );
     }
 }
 
-impl<T, M, P, O> Backprop<NodeLayer<T, P>, NodeLayer<T, O>, Tensor<T, 5, P>, Tensor<T, 5, O>, Tensor<T, 2, M>> for DenseLayer<T, M>
+impl<T, M, P, O> Backprop<NodeLayer<T, O>, NodeLayer<T, P>, Tensor<T, 5, P>, Tensor<T, 5, O>, Tensor<T, 2, M>> for DenseLayer<T, M>
 where
     T: Default + Debug + Copy + PartialEq + Add<Output = T> + Mul<Output = T> + AddAssign,
     M: MemoryType,
     O: MemoryType,
     P: MemoryType,
-    Memory<T, M>: MemoryTraits<Type = T>,
-    Memory<T, O>: MemoryTraits<Type = T>,
+    Memory<T, M>: MemoryTraits<Type = T> + Default,
+    Memory<T, O>: MemoryTraits<Type = T> + Default,
     Memory<T, P>: MemoryTraits<Type = T>,
-    Tensor<T, 2, M>: TensorTraits<T, 2, M>,
     Tensor<T, 5, O>: TensorTraits<T, 5, O>,
-    Tensor<T, 5, P>: TensorTraits<T, 5, P>
+    Tensor<T, 5, P>: TensorTraits<T, 5, P>,
+    Tensor<T, 2, M>: TensorTraits<T, 2, M>,
+    for<'b> &'b Tensor<T, 5, O>: ContractAssignTo<4, &'b Tensor<T, 5, O>, Tensor<T, 2, M>>,
+    for<'b> &'b Tensor<T, 2, M>: ContractAssignTo<1, &'b Tensor<T, 5, P>, Tensor<T, 5, O>>,
 {
-    fn backprop( &self, input: &NodeLayer<T, P>, _: &NodeLayer<T, O>, output_delta: &Tensor<T, 5, P>, input_delta: &mut Tensor<T, 5, O>, grad: &mut Tensor<T, 2, M> ) {
-        contract( output_delta, & **input, grad, &[1], &[0] );
-        contract( &self.weights, output_delta, input_delta, &[1], &[0] );
+    fn backprop( &self, input: &NodeLayer<T, O>, _: &NodeLayer<T, P>, output_delta: &Tensor<T, 5, P>, input_delta: &mut Tensor<T, 5, O>, grad: &mut Tensor<T, 2, M> ) {
+        output_delta.contract_assign_to( [ 0, 1, 2, 3 ], [ 0, 1, 2, 3 ], &(**input), grad );
+        (&self.weights).contract_assign_to( [ 1 ], [ 0 ], output_delta, input_delta );
     }
 }
 
@@ -155,8 +165,6 @@ where
 
 #[cfg(test)]
 mod tests {
-    use crate::layer::{Backprop, GradientDecent};
-
     #[test]
     fn inference_test() {
         use memory::{ Memory, stack::Stack };
@@ -165,6 +173,7 @@ mod tests {
             Layer,
             Inference,
             Backprop,
+            GradientDecent,
             node::NodeLayer
         };
         use super::DenseLayer;
@@ -203,9 +212,9 @@ mod tests {
             [ 0.1; 4 ]
         );
 
-        let mut grad = Tensor::<f32, 2, Stack<16>>::new(
+        let mut grad = Tensor::<f32, 2, Stack<{ 4 * 4 }>>::new(
             [ 4, 4 ].into(),
-            [ 0.1; 16 ]
+            [ 0.1; 4 * 4 ]
         );
 
         println!( "Before:");
